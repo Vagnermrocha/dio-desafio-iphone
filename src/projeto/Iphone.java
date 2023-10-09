@@ -38,57 +38,66 @@ public class Iphone implements AparelhoTelefonico, ReprodutorMusical, NavegadorI
 		System.out.println("Atualizando página da web");
 	}
 	
-	public static void main(String[] args) throws InterruptedException{
+	public static void main(String[] args) throws InterruptedException {
 		Scanner scanner = new Scanner(System.in);
 		Iphone iphone = new Iphone();
 		int opcao;
 			do {
-				System.out.println("Selecione uma opção no menu: \n + " + "2: Atender a ligaçao \n + " + "3: Iniciar correio de voz \n + " + "4: Selecionar música \n + " + "5: Reproduzir a música \n + " + "6: Pausar a música \n " + "7: Exibir página no navegador \n" + "8: Abrir nova aba no navegador \n" + "9: Atualizar página do navegador \n " +  "0: Desligar");			
+				System.out.println("Selecione uma opção no menu: \n " + 
+			"1: Fazer a ligaçao \n " + 
+			"2: Atender a ligaçao \n " + 
+						"3: Iniciar correio de voz \n " + 
+			"4: Selecionar música \n " + 
+						"5: Reproduzir a música \n " + 
+			"6: Pausar a música \n " + 
+						"7: Exibir página no navegador \n " + 
+			"8: Abrir nova aba no navegador \n " + 
+						"9: Atualizar página do navegador \n " +  "0: Desligar \n");			
 				opcao = scanner.nextInt();
 				
 				switch (opcao) {
 				case 1:
 					iphone.ligar();
-					//Thread.sleep(1000);
+					Thread.sleep(1000);
 					break;
 				case 2: 
 					iphone.receberLigacao();
-				//Thread.sleep(1000);
+				    Thread.sleep(1000);
 					break;
 				case 3: iphone.iniciarCorreioDeVoz();
-				//    Thread.sleep(1000);				    
+				    Thread.sleep(1000);				    
 				    break;
 				case 4:
 					iphone.SelecionarMusica();
-					//Thread.sleep(1000);	
+					Thread.sleep(1000);	
 					break;
 				case 5:
 					iphone.tocarPrayer();
-					//Thread.sleep(1000);	
+					Thread.sleep(1000);	
 					break;
 				case 6:
 					iphone.pausarPrayer();
-					//Thread.sleep(1000);	
+					Thread.sleep(1000);	
 					break;
 				case 7:
 					iphone.exibirPaginaWeb();
-				//	Thread.sleep(1000);	
+					Thread.sleep(1000);	
 					break;
 				case 8:
 					iphone.AdicionarNovaAbaWeb();
-				//	Thread.sleep(1000);	
+					Thread.sleep(1000);	
 					break;
 				case 9:
 					iphone.atualizarPaginaWeb();
-				//	Thread.sleep(1000);	
+					Thread.sleep(1000);	
 					break;
-				case 10:
+				case 0:
 					System.out.println("Desligando oaparelho");
-					//Thread.sleep(900);	
+					Thread.sleep(900);	
 					break;
 				default: 
 					System.out.println("Opção invalida. Insira um número de 0 a 9.");
-			//	Thread.sleep(1000);	
+				Thread.sleep(1000);	
 				}		
 				
 				} while (opcao !=0);
